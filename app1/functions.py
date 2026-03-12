@@ -6,7 +6,7 @@ def todos_read(filepath=FILEPATH):
         todos_local = file.readlines()
     return todos_local
 
-print(help(todos_read))
+#print(help(todos_read))
 
 def todos_write(todos_arg ,filepath=FILEPATH):
     """" Write the text file and return the list of todos"""
@@ -14,7 +14,6 @@ def todos_write(todos_arg ,filepath=FILEPATH):
         file.writelines(todos_arg)
 
 
-
-print(__name__)
-if __name__ == "__main__":
-    print("bruh")
+# print(__name__)
+# if __name__ != "__main__":
+#     print("hello")

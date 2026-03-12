@@ -5,6 +5,7 @@ import time
 now = time.strftime("%B %d, %Y %H:%M:%S") #
 #used to format date and time objects into human-readable
 #strings based on a specified format using special format codes
+print("The time is below")
 print(f"It is {now}")
 
 while True:

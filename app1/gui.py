@@ -2,25 +2,28 @@ import functions
 import FreeSimpleGUI as app
 import time
 
-app.theme("NeonYellow1")
+app.theme("DarkGrey12")
 clock = app.Text("" , key="clock")
 text_box = app.Text("Type To-Do")
 input_box =app.InputText(tooltip="Enter todo",key="input_box")
-add_button = app.Button("Add")
+add_button = app.Button(image_source="add.png", image_size=(50,25),mouseover_colors="LightBlue2",
+                        tooltip="Add Todo",key="Add")
 
 list_box = app.Listbox(values= functions.todos_read(),key ='list',
                        enable_events= True ,size=[45,10])
 edit_button = app.Button("Edit")
 
-complete_button = app.Button("Complete")
+complete_button = app.Button(image_source="complete.png",image_size=(50,25),mouseover_colors="LightBlue2",
+                             tooltip="Complete",key="Complete")
 exit_Button = app.Button("Exit")
 
 
 window = app.Window("To-Do APP",
                     layout = [[clock],
-                    [text_box],[input_box,add_button,edit_button],
-                    [list_box,complete_button,exit_Button]],
-                    font = ("helvetica" , 15))
+                             [text_box],[input_box,add_button],
+                             [list_box,complete_button,edit_button],
+                             [exit_Button]],
+                             font = ("helvetica" , 15))
 
 while True:
     event,value = window.read(timeout=200)
